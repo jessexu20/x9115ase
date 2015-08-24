@@ -6,7 +6,7 @@
 
 ##### python screenshot
 
-![python screenshot](python screenshot.png)
+![python screenshot](python_screenshot.png)
 
 ##### pip_screenshot
 
