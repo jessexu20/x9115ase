@@ -34,4 +34,4 @@
 
 ##### All-passed tests
 
-![some_failed_test](some_failed_test.png)
+![all_passed_test](all_passed_test.png)
