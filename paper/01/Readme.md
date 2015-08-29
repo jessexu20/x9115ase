@@ -8,7 +8,7 @@
 - Shiqian Xu(jessexu20)[student ID: sxu11]
 
 ##### i. Reference to the Paper
-S. Apel, H. Speidel, P. Wendler, A. von Rhein, and D. Beyer,¡°Detection of feature interactions using feature-aware verification,¡±in ASE. IEEE, 2011, pp. 372¨C375.
+S. Apel, H. Speidel, P. Wendler, A. von Rhein, and D. Beyer, "Detection of feature interactions using feature-aware verification", in ASE. IEEE, 2011, pp. 372-375.
 
 ##### ii. Most Important Keywords 
 
@@ -60,10 +60,10 @@ The result of case study is shown in another paper [2]. Maybe it is because of t
 
 
 ##### References  
-[1] [S. Apel, H. Speidel, P. Wendler, A. von Rhein, and D. Beyer,¡°Detection of feature interactions using feature-aware verification,¡±in ASE. IEEE, 2011, pp. 372¨C375.](http://delivery.acm.org/10.1145/2200000/2190192/06100075.pdf?ip=152.7.76.41&id=2190192&acc=ACTIVE%20SERVICE&key=6ABC8B4C00F6EE47%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=541401806&CFTOKEN=45181877&__acm__=1440853073_70979f784f9d36da24953b41c85f2999)
+[1] [S. Apel, H. Speidel, P. Wendler, A. von Rhein, and D. Beyer, "Detection of feature interactions using feature-aware verification", ASE. IEEE, 2011, pp. 372-375.](http://delivery.acm.org/10.1145/2200000/2190192/06100075.pdf?ip=152.7.76.41&id=2190192&acc=ACTIVE%20SERVICE&key=6ABC8B4C00F6EE47%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=541401806&CFTOKEN=45181877&__acm__=1440853073_70979f784f9d36da24953b41c85f2999)
 
 [2] [Apel, Sven, Hendrik Speidel, Philipp Wendler, Alexander von Rhein, and Dirk Beyer. "Feature-Aware Verification." arXiv preprint arXiv:1110.0021 (2011).](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.444.5101&rep=rep1&type=pdf)
 
-[3] [H. Post and C. Sinz. Configuration Lifting: Verification meets Software Configuration. In Proc. ASE, pages 347¨C350. IEEE, 2008.](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4639338&tag=1)
+[3] [H. Post and C. Sinz. "Configuration Lifting: Verification meets Software Configuration". In Proc. ASE, pages 347-350. IEEE, 2008.](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4639338&tag=1)
 
 [4] [Hall, Robert J. "Fundamental nonmodularity in electronic mail." Automated Software Engineering 12, no. 1 (2005): 41-79.](http://link.springer.com/article/10.1023/B:AUSE.0000049208.84702.84)
