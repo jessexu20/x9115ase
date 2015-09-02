@@ -6,7 +6,9 @@
 - Zexi Chen (jay1204)[student ID: zchen22]
 
 - Shiqian Xu (jessexu20)[student ID: sxu11]
+
+
 ### Screenshots
 
 #### Simulated Annealing
-![Simulated Annealing](simulatedannealing.png)
+![Simulated Annealing](SimulatedAnnealing.png)
