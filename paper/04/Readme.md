@@ -44,12 +44,17 @@ The authors compare the FEATUREHOUSE approach with the approach taken previously
 
 After they finishes this paper, they are still working on a formalization of the FST model and tools to be integrated into FEATUREHOUSE. They actually have given a very solid idea on features of the tool. They are also interested in integrating the XML much better with FST model and evaluating the possibility whether FEATUREBNF can be replaced by XML.
 
-### Three ways the paper could be improved.
-#### iv1.
+### iv. Three ways the paper could be improved.
+#### iv1. More detailed Comparison
+The authors only give narrative details on the new tool's performance. Maybe more visualized data set and graphs could make readers to understand the performance better.
 
-#### iv2.
+#### iv2. More languages
+The authors mention that superimposition is applicable to a wide range of languages including object-oriented languages, functional languages, imperative languages, document description languages, however, in most of cases on the dataset, they are using Java and C++. I am wondering if more diverse languages can be used for the test cases.
 
-#### iv3.
+#### iv3. Structure Issue
+It seems that the authors have not given a summary in the beginning of the paper on how the paper is composed. They should tell the reader about section summaries.
+
+### v. Connection with other paper
 
 
 ### References  
