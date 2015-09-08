@@ -33,7 +33,7 @@ a) to detect feature interactions based on specifications that do not have globa
 b) to detect feature interactions without the need of generating and checking all individual products.
 
 <b> iii2. Delivery tools</b>  
-Authors have developed the tool chain SPLVERIFIER for featureaware verification and have used it in a case study ¡ªan e-mail client that was developed as a product line¡ª to investigate the potential of feature-aware verification for detecting feature interactions.
+Authors have developed the tool chain SPLVERIFIER for featureaware verification and have used it in a case study- an e-mail client that was developed as a product line- to investigate the potential of feature-aware verification for detecting feature interactions.
 SPLVERIFIER and the case study are available on the project's [Web site](http://www.infosun.fim.uni-passau.de/spl/FAV/variability_encoding.html)
 
 <b> iii3. Related works</b>  
