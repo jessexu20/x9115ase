@@ -6,6 +6,6 @@
 
 - Shiqian Xu(jessexu20)[student ID: sxu11]
 
-- Zexi Chen (jay1204)[student ID: zchen22]
+- Preetham Mahishi Srinath(preems)[student ID: pmahish]
 
 - Zhe Yu (azhe825)[student ID: zyu9]
