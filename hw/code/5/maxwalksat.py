@@ -46,6 +46,7 @@ def optc(x,cc,step):
 
 def maxwalksat(maxtries,maxchanges,p,threshold):
     eval=0
+    evalx=0
     for i in range(0,maxtries):
 
         while True:
@@ -66,6 +67,7 @@ def maxwalksat(maxtries,maxchanges,p,threshold):
                     if constraints(x): break
                 if osyczka2(xbest)<osyczka2(x):
                     xbest=x[:]
+                    evalx=eval
                     print("!",end="")
                 else:
                     print("?",end="")
@@ -73,13 +75,14 @@ def maxwalksat(maxtries,maxchanges,p,threshold):
                 x=optc(x,c,step)
                 if osyczka2(xbest)<osyczka2(x):
                     xbest=x[:]
+                    evalx=eval
                     print("!",end="")
                 else:
                     print("+",end="")
         print("")
 
 
-    return {'solution': xbest,'evals': eval}
+    return {'solution': xbest,'evals': eval,'evalx': evalx}
 
 
 if __name__ == '__main__':
@@ -90,4 +93,5 @@ if __name__ == '__main__':
     step=10
     results=maxwalksat(maxtries,maxchanges,p,threshold)
     print("")
-    print("Best solution: %s, " %results['solution'],"f1+f2 (maximization): %s, " %osyczka2(results['solution']),"step * eval: %s * %s" %(step,results['evals']))
+    print("Best solution: %s, " %results['solution'],"f1+f2 (maximization): %s, " %osyczka2(results['solution']),
+          "step * eval: %s * %s" %(step,results['evals']),", at which eval the best x is found: %s" %results['evalx'])
