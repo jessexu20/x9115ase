@@ -39,7 +39,7 @@ def optc(x,cc,step):
     for i in range(-int((x[cc]-xmin[cc])/dis),int((xmax[cc]-x[cc])/dis)+1):
         xc[cc]=x[cc]+i*dis
         if not constraints(xc): continue
-        if osyczka2(xcbest)<osyczka2(xc):
+        if osyczka2(xcbest)>osyczka2(xc):
             xcbest=xc[:]
     return xcbest
 
@@ -58,27 +58,27 @@ def maxwalksat(maxtries,maxchanges,p,threshold):
             if j==0:
                 print(", %4d, : %s, " %(eval,xbest),end="")
             eval+=1
-            if osyczka2(x)>threshold:
-                return {'solution': x,'evals': eval}
+            if osyczka2(x)<threshold:
+                return {'solution': xbest,'evals': eval,'evalx': evalx}
             c=randint(0,5)
+            os_old=osyczka2(x)
             if p<random():
                 while True:
                     x[c]=uniform(xmin[c],xmax[c])
                     if constraints(x): break
-                if osyczka2(xbest)<osyczka2(x):
-                    xbest=x[:]
-                    evalx=eval
-                    print("!",end="")
-                else:
-                    print("?",end="")
             else:
                 x=optc(x,c,step)
-                if osyczka2(xbest)<osyczka2(x):
-                    xbest=x[:]
-                    evalx=eval
-                    print("!",end="")
-                else:
-                    print("+",end="")
+            if osyczka2(xbest)>osyczka2(x):
+                xbest=x[:]
+                evalx=eval
+                print("!",end="")
+            elif osyczka2(x)<os_old:
+                print("+",end="")
+            elif osyczka2(x)==os_old:
+                print(".",end="")
+            else:
+                print("?",end="")
+
         print("")
 
 
@@ -89,9 +89,9 @@ if __name__ == '__main__':
     maxtries=20
     maxchanges=100
     p=0.5
-    threshold=1000000
+    threshold=-1000000
     step=10
     results=maxwalksat(maxtries,maxchanges,p,threshold)
     print("")
-    print("Best solution: %s, " %results['solution'],"f1+f2 (maximization): %s, " %osyczka2(results['solution']),
+    print("Best solution: %s, " %results['solution'],"f1+f2 (minimum): %s, " %osyczka2(results['solution']),
           "step * eval: %s * %s" %(step,results['evals']),", at which eval the best x is found: %s" %results['evalx'])
