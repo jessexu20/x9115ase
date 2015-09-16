@@ -138,12 +138,71 @@ def simulated_annealing(model):
             print("?",end="")
         else:
             print(".",end="")
-        if k%linewidth==0:
+        if k%linewidth==linewidth-1:
             print("")
     print("")
     print("Best solution: %s, " %sb.dec,"f1 and f2: %s, " %sb.getobj(),"steps: %s" %kmax)
     return True
 
+def maxwalksat(model):
+
+    def optc(s,which,step):
+        sn=model()
+        sn.copy(s)
+        snbest=model()
+        snbest.copy(sn)
+        dis=(sn.top[which]-sn.bottom[which])/step
+        for i in range(-int((s.dec[which]-s.bottom[which])/dis),int((s.top[which]-s.dec[which])/dis)+1):
+            sn.dec[which]=sn.dec[which]+i*dis
+            if not sn.check(): continue
+            if sn.eval()<snbest.eval():
+                snbest.copy(sn)
+        return snbest
+
+    eval=0
+    evalx=0
+    maxtries=10
+    maxchanges=100
+    threshold=-10000
+    p=0.5
+    step=10
+    for i in range(0,maxtries):
+        s=model()
+        if i==0:
+            sbest=model()
+            sbest.copy(s)
+        print(", Retries: %2d, : Best solution: %s, " %(i,sbest.dec),end="")
+        for j in range(0,maxchanges):
+            eval+=1
+            if s.eval()<threshold:
+                print("")
+                print("Best solution: %s, " %s.dec,"f1 and f2: %s, " %s.getobj(),
+                      "step * eval: %s * %s" %(step,eval),", at which eval the best x is found: %s" %eval)
+                return True
+            which=randint(0,s.decnum-1)
+            score_old=s.eval()
+            if p<random():
+                s=neighbor(s,which,model)
+            else:
+                s=optc(s,which,step)
+            if s.eval()<sbest.eval():
+                sbest.copy(s)
+                evalx=eval
+                print("!",end="")
+            elif s.eval()<score_old:
+                print("+",end="")
+            elif s.eval()==score_old:
+                print(".",end="")
+            else:
+                print("?",end="")
+        print("")
+    print("Best solution: %s, " %sbest.dec,"f1 and f2: %s, " %sbest.getobj(),
+          "step * eval: %s * %s" %(step,eval),", at which eval the best x is found: %s" %evalx)
+
+
 if __name__ == '__main__':
     seed(time())
-    simulated_annealing(Osyczka2)
+    for model in [Schaffer, Osyczka2, Kursawe]:
+        for optimizer in [simulated_annealing, maxwalksat]:
+            print("Optimizer: %s, " %optimizer.__name__,"Model: %s" %model.__name__)
+            optimizer(model)
