@@ -55,7 +55,7 @@ The authors mention that superimposition is applicable to a wide range of langua
 It seems that the authors have not given a summary in the beginning of the paper on how the paper is composed. They should tell the reader about section summaries.
 
 ### v. Connection with other paper
-
+In paper "An Overview of Feature-Oriented Software Development" by Apel, Sven, and Christian Kästner, Journal of Object Technology 8, no. 5 (2009): 49-84, the authors mentioned that the trend to explore the principles of feature modularity separate from a particular language. They mentions that the integration of new languages into the AHEAD tools suite was ad hoc and tedious. However, the FeatureHouse which this paper produced provides an easy-to-use plug-in mechanism for new languages, makeing many different languages prepared for implementing and composing features.
 
 ### References  
 [1] [Apel, Sven, Christian Kastner, and Christian Lengauer. "FEATUREHOUSE: Language-independent, automated software composition." In Proceedings of the 31st International Conference on Software Engineering, pp. 221-231. IEEE Computer Society, 2009.](http://dl.acm.org/citation.cfm?id=1555038)
