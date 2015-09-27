@@ -1,5 +1,13 @@
 ## Code 2
 
+#####Group Members:
+
+- Zhe Yu (azhe825)[student ID: zyu9]
+
+- Preetham Mahishi Srinath(preems)[student ID: pmahish]
+
+- Shiqian Xu (jessexu20)[student ID: sxu11]
+
 ###Exercise 3
 
 ####3-1
