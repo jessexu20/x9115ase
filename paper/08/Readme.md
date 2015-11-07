@@ -16,9 +16,9 @@ Detection of feature interactions using feature-aware verification
 Given a model of a system, exhaustively and automatically check whether this model meets a given specification. Typically, one has hardware or software systems in mind, whereas the specification contains safety requirements such as the absence of deadlocks and similar critical states that can cause the system to crash. Model checking is a technique for automatically verifying correctness properties of finite-state systems. 
 ##### ii2. Product-Line Verification
 Product-line verification refers to analysis and verification techniques which is used to ensure correctness, reliability, and security of product-line technologies. In this paper, it discusses three popular ways which are being used nowadays, which are product-based strategy, sample-based strategy and family-based strategy.
-##### ii3. feature interaction
+##### ii3. Feature Interaction
 Feature interaction is a situation when two or more features are combined into one behavior that cannot be simply deduced from the behavior of the individual involved features. 
-##### ii4.  tool chain
+##### ii4. Tool chain
 A toolchain is a set of distinct software development tools that are linked (or chained) together by specific stages such as GCC, binutils and glibc. Alternatively, a toolchain may contain other tools such as a Debugger or a Compiler for a specific programming language. In this paper, it refers to the SPLVERIFIER, which consists a number of tools:  FEATUREHOUSE(feature composition), CPACHECKER(model checking for C) and JAVA PATHFINDER (model checking for Java). Both of the model checking tools support the verification of safety properties by means of explicit-state and symbolic model checking.
 
 #### iii. Artifacts:
@@ -45,8 +45,12 @@ Finally they showed us on the three different strategies' performance on the six
 
 
 #### iv. Improvements:
-##### iv1.
+Although this paper generally gives us great abstract on how the case study and experiments have been conducted, there are serveral things could be improved.
+##### iv1. 
+By giving an example on how Email Systems works, the author could give a brief explanation why Email system or other system is selected to be illustrated as an example.
 ##### iv2.
+There are clear clarification for the code snippets in the paper, however for the magic math equation, there could be more explanations as Math equations are always hard for readers to understand.
 ##### iv3.
+A small suggestion would also be something like a section on how this paper is structured could be given at the first place so that reader could get a clear mind when going through the paper.
 
  
