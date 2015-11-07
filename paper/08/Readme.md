@@ -31,11 +31,22 @@ Based on the experiments, the authors have revisited the discussion of the stren
 ##### iii3. Related work
 In related work section, they talked a lot about the sampling heuristics done by researches in feature-interaction detection. Also there are other case studies which did studies on sample-based strategy using pair-wise methods. Furthermore, they talked about researches on family-based strategy and feature-based verfication, however the related paper fails to cover the performance regarding to family-based strategy.
 ##### iii4. Data
-The authors have compared six models in this paper using three different strategies and sample algorithms. They firsted using the state diagram to illustrate how simulator will be like.<img src= "diagram.png">
-Then list the scale of the model.<img src= "data.png">
-Finally they showed us on the three different strategies' performance on the six models.<img src= "chart.png">
+The authors have compared six models in this paper using three different strategies and sample algorithms. They firsted using the state diagram to illustrate how simulator will be like.
+
+<img src= "diagram.png">
+
+Then list the scale of the model.
+
+<img src= "data.png">
+
+Finally they showed us on the three different strategies' performance on the six models.
+
+<img src= "chart.png">
 
 
 #### iv. Improvements:
+##### iv1.
+##### iv2.
+##### iv3.
 
  
