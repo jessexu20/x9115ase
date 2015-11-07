@@ -36,6 +36,9 @@ In this paper, authors purposed a practical, scalable, variability-aware and sam
 Other than pair-wise sampling heuristics, they could also experimenting with other sampling heuristics and studing other large-scale systems and to find out whether the conclusion is still true, such as three-wise sampling heuristics. They could also work on something like how to set up an automated and incremental checking system for producing bug reports.
 #### iv. Improvements:
 ##### iv1.
+Future work is a little bit weak, instead of just saying setting up an automated system, authors could also say something about if there are some relevant works could be improved as this is a trend to set up automated systems for producing bug reports.
 ##### iv2.
+Conclusion should be more concrete by listing some of the results got from the comparison and emperical study.
 ##### iv3.
+A small suggestion would also be something like a section on how this paper is structured could be given at the first place so that reader could get a clear mind when going through the paper.
  
