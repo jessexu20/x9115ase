@@ -20,6 +20,7 @@ In this paper, variability-aware type checker works in a similar way, however in
 - a symbol (variable, function, etc.) may only be declared in some variants, or it may even have alternative types in different variants.
 - during expression typing, we assign a variable type to each expression where already looking up a name in a symbol table may return a variable type.
 - we can use the variability model of a system to filter all type errors that occur only in invalid variants.
+
 ##### ii3. Liveness Analysis
 Liveness analysis is a traditional data-flow analysis to compute whether variables are live, which may be read before being written again for a given statement. Its result can be used to conservatively detect dead code, useless code. The computation of liveness is a fixpoint algorithm that uses two functions, in and out, which compute variables that are live at respectively after the current statement.
 ##### ii4.  Variability Analysis
