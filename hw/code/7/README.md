@@ -1,4 +1,4 @@
-## Homework Code 5
+## Homework Code 7
 #####Group Members:
 
 - Zhe Yu (azhe825)[student ID: zyu9]
@@ -11,4 +11,6 @@
 ### Screenshots
 
 #### Results
-![Screen shot](maxwalksat.png)
+![Screen shot](result_1.png)
+![Screen shot](result_2.png)
+![Screen shot](result_3.png)
