@@ -27,7 +27,7 @@ For evaluating the procedure, the authors have selected 6 programs. Three of the
 There are many related works aimed at predicting the performance of a customizable program or a Software Program Line generated program, many of them can be categorized into three types,  model-based, measurement-based and mixed.  In model based linear and multiple regression models the relationship between input parameters and performance as output.
 ##### iii4. Results
 The below table shows the results of the experiment containing the 6 different programs when used with 3 different heuristics namely Pair-Wise Interactions (PW), Higher-Order Interactions(HO) and Hot-Spot Features(HS).
-![results](result.jpg)
+![results](result.png)
 #### iv. Ways to improve the paper
  - iv1. There is no theoretical proof for the 95% accuracy that is claimed in the paper. Only experiments report 95% accuracy
  - iv2.    The authors should have also selected programs not only from complied and static typed languages, but also from dynamic typed languages like Python and JavaScript. 
