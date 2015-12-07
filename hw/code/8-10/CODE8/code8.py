@@ -5,7 +5,9 @@ from time import time
 import numpy as np
 from pdb import set_trace
 import pickle
+import math
 
+#from HVE import hve
 t=10
 c=100
 ERA_SIZE=20
@@ -51,6 +53,22 @@ class Model(object):
     @staticmethod
     def lessThan(a,b):
         return a<b
+    
+    
+    @staticmethod
+    def lessT(a,b):
+        Model.cdom(a,b)
+        
+    @staticmethod
+    def cdom(x, y):
+        def loss(xl, yl):
+            n = len(xl)
+            allloss = [math.pow((xi-yi)/n,2) for xi,yi in zip(xl,yl)]
+            return sum(allloss)/n
+
+        x_objs = x.getobj()
+        y_objs = y.getobj()
+        return True if loss(x_objs, y_objs) < loss(y_objs, x_objs) else False
 
 
 class DTLZ7(Model):
@@ -154,7 +172,7 @@ def simulated_annealing(model):
         #if sn.eval()<sb.eval():
         
         if(e==20):
-            if a12(cur_era,prev_era)>0.56: #Check this
+            if a12(cur_era,prev_era)>0.56:
                 life=5
             else:
                 life-=1
@@ -181,10 +199,10 @@ def simulated_annealing(model):
             print("")
         k+=1
     print("")
-    #print("Best solution: %s, " %sb.dec,"f1 and f2: %s, " %sb.getobj(),"steps: %s" %kmax)
     print("Best solution: %s, " %sb.dec,"f1 and f2: %s, " %sb.getobj())
     return True
     
+
 def maxwalksat(model):
 
     def optc(s_old,which,step):
@@ -207,7 +225,13 @@ def maxwalksat(model):
     threshold=-10000
     p=0.5
     step=10
-    for i in range(0,maxtries):
+    e=0
+    cur_era=[0]*ERA_SIZE
+    prev_era=[0]*ERA_SIZE
+    i=0
+    life=5
+    while(life!=0):
+    #for i in range(0,maxtries):
         s=model()
         if i==0:
             sbest=model()
@@ -226,20 +250,34 @@ def maxwalksat(model):
                 s=neighbor(s,which,model)
             else:
                 s=optc(s,which,step)
-            if s.eval()<sbest.eval():
+            
+            if(e==20):
+                if a12(cur_era,prev_era)>0.56:
+                    life=5
+                else:
+                    life-=1
+                prev_era=cur_era
+                cur_era=[0]*ERA_SIZE
+                e=0
+            else:
+                cur_era[e]=s.eval()
+                e+=1    
+            
+            if model.lessThan(s.eval(),sbest.eval()):
                 sbest.copy(s)
                 evalx=eval
                 print("!",end="")
-            elif s.eval()<score_old:
+            elif model.lessThan(s.eval(),score_old):
                 print("+",end="")
             elif s.eval()==score_old:
                 print(".",end="")
             else:
                 print("?",end="")
         print("")
+        i+=1
     print("Best solution: %s, " %sbest.dec,"f1 and f2: %s, " %sbest.getobj(),
           "step * eval: %s * %s" %(step,eval),", at which eval the best x is found: %s" %evalx)
-          
+
           
 def differential_evolution(model):
 
@@ -269,29 +307,39 @@ def differential_evolution(model):
                 print(".",end="")
             yield xnew
 
-
     nb=c
     maxtries=t
     f=0.75
     cr=0.3
     xbest=model()
     candidates=[xbest]
+    life=5
+    j=0
+    old_cand=None
     for i in range(1,nb):
         x=model()
         candidates.append(x)
         if x.eval()<xbest.eval():
             xbest.copy(x)
-    for tries in range(maxtries):
-        print(", Retries: %2d, : Best solution: %s, " %(tries,xbest.dec),end="")
+    while(life!=0):
+        print(", Retries: %2d, : Best solution: %s, " %(j,xbest.dec),end="")
         candidates=[xnew for xnew in mutate(candidates,f,cr,xbest)]
         print("")
+        i+=1
+        if old_cand is not None:
+            if a12(candidates,old_cand)>0.56:
+                life=5
+            else:
+                life-=1
+        old_cand=candidates
+        j+=1
     print("Best solution: %s, " %xbest.dec,"f1 and f2: %s, " %xbest.getobj(),
-          "evals: %s * %s" %(nb,maxtries))
+          "evals: %s * %s" %(nb,j+1))
 
-
-    
 if __name__ == '__main__':
-    model=DTLZ7
-    simulated_annealing(DTLZ7)
-    #maxwalksat(DTLZ7)
-    #differential_evolution(DTLZ7)
+
+    for _ in range(0,20):
+        model=DTLZ7
+        simulated_annealing(DTLZ7)
+        maxwalksat(DTLZ7)
+        differential_evolution(DTLZ7)
