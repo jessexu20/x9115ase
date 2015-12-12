@@ -1,7 +1,17 @@
-## Paper 10
-###
-###
-###
+## Reading Assignment 10
+
+### Group Members:
+
+- Zhe Yu (azhe825)[student ID: zyu9]
+
+- Preetham Mahishi Srinath(preems)[student ID: pmahish]
+
+- Shiqian Xu(jessexu20)[student ID: sxu11]
+
+### Abstract
+### Introduction
+### Related Work
+### Results
 #### Software Product Line Engineering
 Software Product Line engineering, a set of software-intensive systems that share a common, managed set of features satisfying the specific needs of a particular market segment or mission and that are developed from a common set of core assets in a prescribed way.[ http://www.sei.cmu.edu/productlines/frame_report/what.is.a.PL.htm]. However, a scalable modelling and an efficient method to verify the system behavior needs to be put forward to meet the requirements. A featured transition system(FTS) has been purposed to obtain the behavior of each product of the Software product line. FTS is able to reason about the whole product line, or subsets of it, and model very detailed behavioral variations. Moreover, it could run model checking tool freely and take account into the feature dependencies and incompatibilities. Another model checking technique has been introduced to verify LTL properties for all the products of an SPL at once and would point out the products that violate the properties.  linear-time temporal logic is an infinite sequence of states where each point in time has a unique successor, based on a linear-time perspective. [http://www.cs.colostate.edu/~france/CS614/Slides/Ch5-Summary.pdf]
  Using SPL could help to take economic advantage of the fact that many of the products are very similar as planned and deliberate, strategic decisions are made to impact decisions systematically.
@@ -11,3 +21,6 @@ Model-checking technology is used to exhaustively and automatically check whethe
 
 #### Scalable Analysis of Variable Software
 Variability Analysis, known as family-based analysis, is not to generate and analysis variants separately but to directly analyze the variable code base by utilizing some configuration knowledge. Although, there are several proposals on this theme, there are no real-life, large-scale systems being implemented due to its potential challenges. It requires more effort than traditional analysis of a single system as all local variants are considered into the analysis. But the effort is worth taken as it could avoid analyzing the common code by taking advantage of similarities among variants. Therefore, [] proposed a way to detect whether variability-aware analysis scales to large systems, as it should consider all code and all variations of a system simultaneously. Before [], they have already come out with a sort of Java libraries which could handle the scaling in Java written project such as Featherweight Java, Lightweight Java, the lambda calculus, and other dialects of Java. They also took advantage of other researchers' variability-aware approaches for data-flow analysis using liveness analysis, which is a traditional data-flow analysis to compute whether variables are live, which may be read before being written again for a given statement. Its result can be used to conservatively detect dead code, useless code. A practical, scalable, variability-aware and sampling-based analysis for real-world, large-scale systems written in C is finally purposed. Experiments on large-scale system including Linux Kernel is taken and the performance of variability-aware analysis outperforms some of the sampling heuristics and still being complete and some of the limitations on pair-wise, sampling heuristics are found. Also some future work regarding to other large system should also be included to test the achieved results.
+### Conclusion
+### Improvement
+### References
