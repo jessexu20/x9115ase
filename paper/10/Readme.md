@@ -38,8 +38,9 @@ model the relationship between features and a performance output. Based on such 
 <img src= "pic/variablity-aware.png">
 
 #### Hypothesis
-Need your words
+As in paper *Model Checking Lots of Systems*[12] stated The differences between the systems of an Sofeware Product Line are normally expressed in terms of features. However, this assumes that all the products can be specified using the features, which is foundation of this methodology. Under this assumption, all products or software can be shaped using features purposed by engineers and stakeholders[19] and the specification of the product is just a set of feautres which may be a particular member of the product line.
 
+In comparison between different strategies for production line verfication, there are always assumptions that the system model is optional[8], which means except for one of the feature that author is interested in or commonly noticed among all the compared products, other features are ignored. However, in real life case, this might not be true. As many features would have impact on other ones and thus influencing the final results, also the paper could be too concentrated on some of the features and left alone the other ones, which might also be important and bring insight.
 #### One from Issue #8
 Need your words
 
@@ -112,3 +113,5 @@ We will continue on exploring the activities in software product line engineerin
 [17] B. Delaware, W. Cook, and D. Batory. Fitting the Pieces Together: A Machine-Checked Model of Safe Composition. In Proc. Int. Symp. Foundations of Software Engineering (FSE), pages 243–252. ACM, 2009.
 
 [18] S. Chen, M. Erwig, and E. Walkingshaw. An Error-Tolerant Type System for Variational Lambda Calculus. In Proc. Int. Conf. Functional Programming (ICFP), pages 29–40. ACM, 2012.
+
+[19] A. Classen, P. Heymans, and P.-Y. Schobbens. What's in a feature: A requirements engineering perspective. In FASE'08, Held as Part of ETAPS'08, volume 4961 of LNCS, pages 16{30. Springer, 2008.
