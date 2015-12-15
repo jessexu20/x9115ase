@@ -41,8 +41,12 @@ model the relationship between features and a performance output. Based on such 
 As in paper *Model Checking Lots of Systems*[12] stated The differences between the systems of an Sofeware Product Line are normally expressed in terms of features. However, this assumes that all the products can be specified using the features, which is foundation of this methodology. Under this assumption, all products or software can be shaped using features purposed by engineers and stakeholders[19] and the specification of the product is just a set of feautres which may be a particular member of the product line.
 
 In comparison between different strategies for production line verfication, there are always assumptions that the system model is optional[8], which means except for one of the feature that author is interested in or commonly noticed among all the compared products, other features are ignored. However, in real life case, this might not be true. As many features would have impact on other ones and thus influencing the final results, also the paper could be too concentrated on some of the features and left alone the other ones, which might also be important and bring insight.
-#### One from Issue #8
-Need your words
+#### Data
+In [1], the authors conducted their case study on the e-mail system of Hall [21]. It consists of 10 features that give rise to 27 feature interactions. It is divided into a client and a server. 
+
+Two different experiments are conducted in [6]: a) A small sample specification. It consists of five variable I/O-automata and an orthogonal variability model which specifies six variation points and 14 variants. Overall 189 products can be derived from this specification. The product automaton of the specification consists of 12.000 states and 29.000 transitions. b) a realistic specification. It consists of six variable I/O-automata and the orthogonal variability model of the specification consists of ten variation points and 46 variants and allows the derivation of 237 different products. The product automaton of the specification consists of more than 68.000 states and 174.000 transitions.
+
+the authors compared six models in [8] using three different strategies and sample algorithms. They firsted using the state diagram to illustrate how simulator will be like. Then list the scale of the model. Finally they showed us on the three different strategies' performance on the six models.
 
 ### Results
 #### Software Product Line Engineering
@@ -114,4 +118,8 @@ We will continue on exploring the activities in software product line engineerin
 
 [18] S. Chen, M. Erwig, and E. Walkingshaw. An Error-Tolerant Type System for Variational Lambda Calculus. In Proc. Int. Conf. Functional Programming (ICFP), pages 29–40. ACM, 2012.
 
-[19] A. Classen, P. Heymans, and P.-Y. Schobbens. What's in a feature: A requirements engineering perspective. In FASE'08, Held as Part of ETAPS'08, volume 4961 of LNCS, pages 16{30. Springer, 2008.
+[19] A. Classen, P. Heymans, and P.-Y. Schobbens. What's in a feature: A requirements engineering perspective. In FASE'08, Held as Part of ETAPS'08, volume 4961 of LNCS, pages 16-30. Springer, 2008.
+
+[20] Kästner, Christian, Sven Apel, and Martin Kuhlemann. "Granularity in software product lines." In Proceedings of the 30th international conference on Software engineering, pp. 311-320. ACM, 2008.
+
+[21] Hall, Robert J. "Fundamental nonmodularity in electronic mail." Automated Software Engineering 12, no. 1 (2005): 41-79.
